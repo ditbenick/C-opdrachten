@@ -1,0 +1,23 @@
+#include <stdio.h>
+void print_function( char letter );
+int ctr;
+int ctrr;
+int main( void )
+    {
+        char star = '*';
+        char dash = '-';
+        for (ctr = 0 ; ctr < 9; ctr++ )
+            {
+                print_function( star );
+                print_function( dash );
+                printf("\n");
+            }
+        return 0;
+    }
+void print_function ( char letter )
+    {
+        for ( ctrr = 0; ctrr < 10; ctrr++) 
+            {
+                printf("%c", letter);
+            }
+    }
