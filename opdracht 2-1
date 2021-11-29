@@ -15,7 +15,7 @@ int main()
         system("opdracht1-1.exe");
         
     }
-    else if (z == 3)  {
+    else if (z == 0)  {
         printf("gefeliciteerd u heeft een koekje verdient, ik pak hem niet mag je lekker zelf doen");
     }
     else if (z < 0) {
