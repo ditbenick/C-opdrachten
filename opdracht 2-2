@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void omtrek(float, float*);
+
+int main(){
+    float cirkel;
+    float diameter;    
+    printf("geeft de diameter van de cirkel:");
+    scanf("%f", &diameter);
+    omtrek(diameter, &cirkel);
+    printf("%f", cirkel);
+
+}
+
+void omtrek (float d, float *c){
+    *c = 3.141* d;
+}
