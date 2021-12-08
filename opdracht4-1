@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    
+    FILE *fp;
+    char tekst[1000];
+    fp = fopen("tekst.txt", "r");
+    fgets(tekst,1000,fp);
+    int i;
+    for (i = 0; tekst[i] != '\0'; ++i);    
+    printf("Lengte van de zin/woord: %d\n", i);
+     
+    
+    char ch;    
+    int key = 1;
+    
+    for(i = 0; tekst[i] != '\0'; ++i){
+        ch = tekst[i];
+        if(ch >= 'a' && ch <= 'z'){
+            ch = ch + key;
+            if(ch > 'z'){
+                ch = ch - 'z' + 'a' - 1;
+            }
+            tekst[i] = ch;
+        }
+    }
+    printf("%s", tekst);
+    fclose(fp);
+    fp = fopen("textFile.txt" ,"a");
+    fprintf(fp, "%s\n", tekst);
+    fclose(fp);
+    return 0;
+}
+
