@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+
+int main(){
+
+    struct opleiding{
+        char naam[40];
+	    int instroomjaar;
+    };
+    struct student{
+        char naam[40];
+        int leeftijd;
+        struct opleiding opleidingen;
+    };
+
+    struct opleiding opleiding1;
+    struct student  student1;
+    
+    
+    printf("wat is je naam: ");   
+    scanf("%s", student1.naam);
+    
+    printf("wat is je leeftijd: ");   
+    scanf("%d", &student1.opleidingen.naam);
+    
+    printf("wat is de naam van de opleiding: ");   
+    scanf("%s", student1.opleidingen.naam);
+    
+    printf("wat is het instroom jaar: ");   
+    scanf("%d", &student1.opleidingen.instroomjaar);
+       
+    
+    
+    printf(" naam: %s\n",  student1.naam);
+    printf(" leeftijd: %d\n",  student1.leeftijd);    
+    printf("opleiding: %s\n", student1.opleidingen.naam);
+    printf("instroomjaar: %d\n", student1.opleidingen.instroomjaar);
+}
