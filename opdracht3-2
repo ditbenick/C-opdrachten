@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main() 
+{
+    char zin[1000];
+    printf("geef een woord/zin:");
+    scanf("%[^\n]", &zin);    
+    int i;
+    for (i = 0; zin[i] != '\0'; ++i);    
+    printf("Lengte van de zin/woord: %d", i);
+    return 0;
+}
