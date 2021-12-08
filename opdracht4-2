@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(void)
+{
+    struct gebruiker
+    {
+        char name[10];
+        int leeftijd;
+    };
+
+    struct gebruiker *pnt = (struct gebruiker*)
+    malloc(sizeof(struct gebruiker));
+    int cont = 1; int con = 1;
+    struct gebruiker *gebruikpnt;
+
+    while (1){
+        gebruikpnt = pnt;
+        gebruikpnt += (con-1);
+
+        printf("wat is je naam:");
+        scanf("%s", gebruikpnt->name);
+        printf("wat is je leeftijd:");
+        scanf("%d", &gebruikpnt->leeftijd);
+
+        if (cont != 1){
+            break;
+        }
+        printf("\n");
+        struct gebruiker *c = pnt;
+        for (int i = 0; i < con; i++){
+            printf("%s\n", c->name);
+            printf("%d\n", c->leeftijd);
+            c++;
+        }
+        con++;
+        pnt = (struct gebruiker*)
+        realloc(pnt, con * sizeof(struct gebruiker));        
+        if (pnt == 0){
+            return (0);
+        }    
+    }
+}
